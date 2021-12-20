@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+</head>
+<body>
+    
+    <h2>Enter Product</h2>
+    <form action="/api/productos" method="POST">
+        Title: <input type="text" name="title">
+        Price: <input type="text" name="price">
+        Photo: <input type="text" name="thumbnail">
+        <button>Enviar</button>
+    </form>
+    
+    <br><hr>
+
+    <h2>Modify Product</h2>
+    <form action="/api/productos" method="PUT">
+        ID: <input type="text" name="id">
+        Title: <input type="text" name="title">
+        Price: <input type="text" name="price">
+        Photo: <input type="text" name="thumbnail">
+        <button>Enviar</button>
+    </form>
+    <h2>Delete Product</h2>
+    <form action="/api/productos" method="DELETE">
+        ID: <input type="text" name="id">
+
+        <button>Enviar</button>
+    </form>
+    <a href="/api/productos"><button>View All</button></a>
+    
+</body>
+</html>
