@@ -42,15 +42,16 @@ class Productos {
         }
     }
     update(id, obj) {
-        this.productos.find( x => x.id === id) = {
-            id: id,
+        console.log();
+        const newProds = this.productos.map(prod => prod.id === id ? obj : prod)
+        this.productos = newProds;
+/*         this.productos[productos.findIndex(el => el.id === obj.id)] =  {
             ...obj
-        }
+        } */
     }
     delete(id) {
-        this.productos.find( x => x.id === id) = {
-            id: id
-        }
+        const newProds = this.productos.map( x => x.id === id ? null : x) 
+        this.productos = newProds;
     }
 }
 
@@ -69,11 +70,12 @@ routerProductos.post('/', (req,res) => {
 })
 
 routerProductos.put('/:id', (req,res) => {
-    productos.update(req.params.id, req.body)
+    console.log(req.params.id)
+    productos.update(parseInt(req.params.id), req.body)
     res.json(productos.get())
 })
 routerProductos.delete('/:id', (req,res) => {
-    productos.delete(req.params.id)
+    productos.delete(parseInt(req.params.id))
     res.json(productos.get())
 })
 
