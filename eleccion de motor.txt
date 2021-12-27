@@ -1,0 +1,3 @@
+de los 3 prefiero EJS porque es el mas facil de usar. 
+pug esta bastante pasable pero ya habia usado jinja en django y EJS es super parecido
+y no da complicaciones con el sistema de archivos como con handlebars
